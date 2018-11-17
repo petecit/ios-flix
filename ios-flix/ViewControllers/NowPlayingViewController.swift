@@ -86,6 +86,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let baseURLString = "https://image.tmdb.org/t/p/w500"
         let posterURL = URL(string: baseURLString + posterPathString)!
         cell.poserImageView.af_setImage(withURL: posterURL)
+        
+        // remove gray selection style
+        cell.selectionStyle = .none
+        
         return cell
     }
     
